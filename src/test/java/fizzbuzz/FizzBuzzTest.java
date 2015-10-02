@@ -1,41 +1,36 @@
 package fizzbuzz;
 
+import com.google.common.collect.Lists;
 import org.hamcrest.CoreMatchers;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+
+import java.util.Collection;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
+@RunWith(Parameterized.class)
 public class FizzBuzzTest {
 
-    @Test
-    public void input_1_shouldGive_1(){
-        assertThat(new FizzBuzz().go(1), is("1"));
+    private final int input;
+    private final String result;
+
+    @Parameters(name = "input {0} should give {1}")
+    public static Collection<Object[]> data() {
+        return Lists.newArrayList(new Object[][]{{1, "1"}, {2, "2"}, {3, "Fizz"}, {4, "4"}, {5, "Buzz"}, {15, "FizzBuzz"}});
+    }
+
+    public FizzBuzzTest(int input, String result) {
+        this.input = input;
+        this.result = result;
     }
 
     @Test
-    public void input_2_shouldGive_2(){
-        assertThat(new FizzBuzz().go(2), is("2"));
-    }
-
-    @Test
-    public void input_3_shouldGive_Fizz(){
-        assertThat(new FizzBuzz().go(3), is("Fizz"));
-    }
-
-    @Test
-    public void input_4_shouldGive_4(){
-        assertThat(new FizzBuzz().go(4), is("4"));
-    }
-
-    @Test
-    public void input_5_shouldGive_Buzz(){
-        assertThat(new FizzBuzz().go(5), is("Buzz"));
-    }
-
-    @Test
-    public void input_15_shouldGive_FizzBuzz(){
-        assertThat(new FizzBuzz().go(15), is("FizzBuzz"));
+    public void testFizzBuzzWith() {
+        assertThat(new FizzBuzz().go(input), is(result));
     }
 
 }
