@@ -4,22 +4,24 @@ public class FizzBuzz {
 
     public static final String FIZZ = "Fizz";
     public static final String BUZZ = "Buzz";
-    public static final String FIZZ_BUZZ = "FizzBuzz";
 
     public FizzBuzz() {
     }
 
     public String go(int input) {
-        if (divisibleByFive(input) && divisibleByThree(input)) {
-            return FIZZ_BUZZ;
-        }
+        StringBuilder builder = new StringBuilder();
+
         if (divisibleByThree(input)) {
-            return FIZZ;
+            builder.append(FIZZ);
         }
         if (divisibleByFive(input)) {
-            return BUZZ;
+            builder.append(BUZZ);
         }
-        return "" + input;
+        if (!(divisibleByThree(input) || divisibleByFive(input))) {
+            builder.append(input);
+        }
+
+        return builder.toString();
     }
 
     private boolean divisibleByFive(int input) {
