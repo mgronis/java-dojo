@@ -10,16 +10,24 @@ public class FizzBuzz {
     }
 
     public String go(int input) {
-        if (input % 15 == 0) {
+        if (divisibleByFive(input) && divisibleByThree(input)) {
             return FIZZ_BUZZ;
         }
-        if (input % 3 == 0) {
+        if (divisibleByThree(input)) {
             return FIZZ;
         }
-        if (input % 5 == 0) {
+        if (divisibleByFive(input)) {
             return BUZZ;
         }
         return "" + input;
+    }
+
+    private boolean divisibleByFive(int input) {
+        return input % 5 == 0;
+    }
+
+    private boolean divisibleByThree(int input) {
+        return input % 3 == 0;
     }
 
 }
