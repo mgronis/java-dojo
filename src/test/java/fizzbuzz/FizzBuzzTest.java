@@ -23,4 +23,13 @@ public class FizzBuzzTest {
         assertThat(new FizzBuzz().go(3), is("Fizz"));
     }
 
+    @Test
+    public void input_4_shouldGive_4(){
+        assertThat(new FizzBuzz().go(4), is("4"));
+    }
+
+    @Test
+    public void input_5_shouldGive_Buzz(){
+        assertThat(new FizzBuzz().go(5), is("Buzz"));
+    }
 }
