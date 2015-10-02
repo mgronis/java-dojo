@@ -9,6 +9,9 @@ public class FizzBuzz {
     }
 
     public String go(int input) {
+        if (input % 15 == 0) {
+            return "FizzBuzz";
+        }
         if (input % 3 == 0) {
             return FIZZ;
         }

@@ -32,4 +32,10 @@ public class FizzBuzzTest {
     public void input_5_shouldGive_Buzz(){
         assertThat(new FizzBuzz().go(5), is("Buzz"));
     }
+
+    @Test
+    public void input_15_shouldGive_FizzBuzz(){
+        assertThat(new FizzBuzz().go(15), is("FizzBuzz"));
+    }
+
 }
