@@ -1,7 +1,6 @@
 package fizzbuzz;
 
 import com.google.common.collect.Lists;
-import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -10,7 +9,7 @@ import org.junit.runners.Parameterized.Parameters;
 import java.util.Collection;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 @RunWith(Parameterized.class)
 public class FizzBuzzTest {
