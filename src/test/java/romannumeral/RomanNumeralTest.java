@@ -27,5 +27,29 @@ public class RomanNumeralTest {
         assertThat(new RomanNumeral().convert(4), is("IV"));
     }
 
+    @Test
+    public void convert_5_shouldGive_V(){
+        assertThat(new RomanNumeral().convert(5), is("V"));
+    }
+
+    @Test
+    public void convert_6_shouldGive_VI(){
+        assertThat(new RomanNumeral().convert(6), is("VI"));
+    }
+
+    @Test
+    public void convert_7_shouldGive_VII(){
+        assertThat(new RomanNumeral().convert(7), is("VII"));
+    }
+
+    @Test
+    public void convert_8_shouldGive_VIII(){
+        assertThat(new RomanNumeral().convert(8), is("VIII"));
+    }
+
+    @Test
+    public void convert_9_shouldGive_IX(){
+        assertThat(new RomanNumeral().convert(9), is("IX"));
+    }
 
 }

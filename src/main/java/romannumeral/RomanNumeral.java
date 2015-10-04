@@ -4,15 +4,19 @@ public class RomanNumeral {
 
     public static final String IV = "IV";
     public static final String I = "I";
+    public static final String V = "V";
 
-    public String convert(int arabic) {
+    public String convert(int arabicNumber) {
 
-        while (arabic > 0) {
-
-            if (arabic == 4) {
+        while (arabicNumber > 0) {
+            if (arabicNumber == 9) {
+                return "IX";
+            } else if (arabicNumber >= 5) {
+                return V + convert(arabicNumber - 5);
+            } else if (arabicNumber == 4) {
                 return IV;
             } else {
-                return I + convert(--arabic);
+                return I + convert(--arabicNumber);
             }
         }
 
