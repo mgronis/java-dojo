@@ -12,8 +12,8 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
+    compile libs['guava']
     testCompile libs['junit']
     testCompile libs['hamcrest']
     testCompile libs['mockito']
-    testCompile libs['guava']
 }

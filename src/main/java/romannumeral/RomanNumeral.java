@@ -1,5 +1,7 @@
 package romannumeral;
 
+import com.google.common.base.Preconditions;
+
 public class RomanNumeral {
 
     public static final String IV = "IV";
@@ -17,7 +19,9 @@ public class RomanNumeral {
     public static final String CM = "CM";
 
     public String convert(int arabicNumber) {
-        
+
+        Preconditions.checkArgument(arabicNumber >= 0, "Can't handle negative numbers");
+        Preconditions.checkArgument(arabicNumber < 5000, "Can't handle numbers greater than 4999");
 
         while (arabicNumber > 0) {
             if (arabicNumber >= 1000) {
