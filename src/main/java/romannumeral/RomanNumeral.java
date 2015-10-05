@@ -17,6 +17,7 @@ public class RomanNumeral {
     public static final String CM = "CM";
 
     public String convert(int arabicNumber) {
+        
 
         while (arabicNumber > 0) {
             if (arabicNumber >= 1000) {
@@ -37,14 +38,14 @@ public class RomanNumeral {
                 return XL + convert(arabicNumber - 40);
             }else if (arabicNumber >= 10) {
                 return X + convert(arabicNumber - 10);
-            }else if (arabicNumber == 9) {
-                return IX;
+            }else if (arabicNumber >= 9) {
+                return IX + convert(arabicNumber - 9);
             } else if (arabicNumber >= 5) {
                 return V + convert(arabicNumber - 5);
-            } else if (arabicNumber == 4) {
-                return IV;
+            } else if (arabicNumber >= 4) {
+                return IV + convert(arabicNumber - 4);
             } else {
-                return I + convert(--arabicNumber);
+                return I + convert(arabicNumber - 1);
             }
         }
 
