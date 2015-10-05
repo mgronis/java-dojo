@@ -13,11 +13,16 @@ public class RomanNumeral {
     public static final String C = "C";
     public static final String ID = "ID";
     public static final String D = "D";
+    public static final String IM = "IM";
 
     public String convert(int arabicNumber) {
 
         while (arabicNumber > 0) {
-            if (arabicNumber >= 500) {
+            if (arabicNumber >= 1000) {
+                return "M" + convert(arabicNumber - 1000);
+            }else if (arabicNumber == 999) {
+                return IM;
+            }else if (arabicNumber >= 500) {
                 return D + convert(arabicNumber - 500);
             }else if (arabicNumber == 499) {
                 return ID;
