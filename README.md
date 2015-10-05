@@ -1,2 +1,2 @@
 # dojo
-Coding katas
+Coding katas in Java
