@@ -19,7 +19,7 @@ public class FizzBuzzTest {
 
     @Parameters(name = "input {0} should give {1}")
     public static Collection<Object[]> data() {
-        return Lists.newArrayList(new Object[][]{{1, "1"}, {2, "2"}, {3, "Fizz"}, {4, "4"}, {5, "Buzz"}, {15, "FizzBuzz"}});
+        return Lists.newArrayList(new Object[][] {{1, "1"}, {2, "2"}, {3, "Fizz"}, {4, "4"}, {5, "Buzz"}, {15, "FizzBuzz"}});
     }
 
     public FizzBuzzTest(int input, String result) {
