@@ -24,4 +24,9 @@ public class BalanceParenthesisTest {
     public void closingParnthesisShouldNotBeBalanced() {
         assertThat(BalanceParenthesis.balance(")"), is(false));
     }
+
+    @Test
+    public void onePairOfOpeningAndClosingShoundlBeBalanced() {
+        assertThat(BalanceParenthesis.balance("()"), is(true));
+    }
 }
