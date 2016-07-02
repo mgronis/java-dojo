@@ -37,7 +37,7 @@ public class BalanceParenthesisTest {
     }
 
     @Test
-    public void onePairOfClosingAndOpeningShoundlBeBalanced() {
+    public void onePairOfClosingAndOpeningShoundlNotBeBalanced() {
         assertThat(BalanceParenthesis.balance(INVERTED_PARENTHESIS_PAIR), is(false));
     }
 
