@@ -28,6 +28,11 @@ public class BalanceParenthesisTest {
     }
 
     @Test
+    public void invalidInputShouldNotBeBalanced() {
+        assertThat(BalanceParenthesis.balance("a"), is(false));
+    }
+
+    @Test
     public void onePairOfOpeningAndClosingShoundlBeBalanced() {
         assertThat(BalanceParenthesis.balance(PARENTHESIS_PAIR), is(true));
     }
