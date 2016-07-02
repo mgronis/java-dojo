@@ -1,18 +1,18 @@
 package balanceing;
 
-import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class BalanceParenthesisTest {
 
-    private static final String empty = "";
+    private static final String EMPTY = "";
+    public static final String PARENTHESIS_PAIR = "()";
 
     @Test
     public void noParenthesisShouldBeBalanced() {
-        assertThat(BalanceParenthesis.balance(empty), is(true));
+        assertThat(BalanceParenthesis.balance(EMPTY), is(true));
     }
 
     @Test
@@ -27,6 +27,11 @@ public class BalanceParenthesisTest {
 
     @Test
     public void onePairOfOpeningAndClosingShoundlBeBalanced() {
-        assertThat(BalanceParenthesis.balance("()"), is(true));
+        assertThat(BalanceParenthesis.balance(PARENTHESIS_PAIR), is(true));
+    }
+
+    @Test
+    public void twoPairsOfOpeningAndClosingShoundlBeBalanced() {
+        assertThat(BalanceParenthesis.balance(PARENTHESIS_PAIR + PARENTHESIS_PAIR), is(true));
     }
 }
