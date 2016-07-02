@@ -1,8 +1,8 @@
 package balanceing;
 
-public class BalanceParenthesisForLoop {
+public class BalanceParenthesisForLoop implements BalanceParenthesis{
 
-    public static boolean balance(String parenthesisString) {
+    public boolean balance(String parenthesisString) {
         int balance = 0;
         for (int stringPos = 0; stringPos < parenthesisString.length(); stringPos++) {
             if (balance < 0) {

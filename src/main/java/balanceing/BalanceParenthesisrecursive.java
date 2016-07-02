@@ -5,9 +5,9 @@ import com.google.common.primitives.Chars;
 import java.util.Iterator;
 import java.util.List;
 
-public class BalanceParenthesisrecursive {
+public class BalanceParenthesisrecursive implements BalanceParenthesis{
 
-    public static boolean balance(String parenthesisString) {
+    public boolean balance(String parenthesisString) {
 
         List<Character> characters = Chars.asList(parenthesisString.toCharArray());
 
