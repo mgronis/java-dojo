@@ -2,7 +2,7 @@ package balanceing;
 
 import org.junit.Test;
 
-import static balanceing.BalanceParenthesisForLoop.*;
+import static balanceing.BalanceParenthesisForLoop.balance;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
