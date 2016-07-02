@@ -1,6 +1,6 @@
 package balanceing;
 
-public class BalanceParenthesis {
+public class BalanceParenthesisForLoop {
 
     public static boolean balance(String parenthesisString) {
         int balance = 0;

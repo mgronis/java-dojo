@@ -2,10 +2,11 @@ package balanceing;
 
 import org.junit.Test;
 
+import static balanceing.BalanceParenthesisForLoop.*;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-public class BalanceParenthesisTest {
+public class BalanceParenthesisForLoopTest {
 
     private static final String EMPTY = "";
     public static final String PARENTHESIS_PAIR = "()";
@@ -15,52 +16,52 @@ public class BalanceParenthesisTest {
 
     @Test
     public void noParenthesisShouldBeBalanced() {
-        assertThat(BalanceParenthesis.balance(EMPTY), is(true));
+        assertThat(balance(EMPTY), is(true));
     }
 
     @Test
     public void openingParnthesisShouldNotBeBalanced() {
-        assertThat(BalanceParenthesis.balance("("), is(false));
+        assertThat(balance("("), is(false));
     }
 
     @Test
     public void closingParnthesisShouldNotBeBalanced() {
-        assertThat(BalanceParenthesis.balance(")"), is(false));
+        assertThat(balance(")"), is(false));
     }
 
     @Test
     public void invalidInputShouldNotBeBalanced() {
-        assertThat(BalanceParenthesis.balance("a"), is(false));
+        assertThat(balance("a"), is(false));
     }
 
     @Test
     public void onePairOfOpeningAndClosingShoundlBeBalanced() {
-        assertThat(BalanceParenthesis.balance(PARENTHESIS_PAIR), is(true));
+        assertThat(balance(PARENTHESIS_PAIR), is(true));
     }
 
     @Test
     public void twoPairsOfOpeningAndClosingShoundlBeBalanced() {
-        assertThat(BalanceParenthesis.balance(PARENTHESIS_PAIR + PARENTHESIS_PAIR), is(true));
+        assertThat(balance(PARENTHESIS_PAIR + PARENTHESIS_PAIR), is(true));
     }
 
     @Test
     public void onePairOfClosingAndOpeningShoundlNotBeBalanced() {
-        assertThat(BalanceParenthesis.balance(INVERTED_PARENTHESIS_PAIR), is(false));
+        assertThat(balance(INVERTED_PARENTHESIS_PAIR), is(false));
     }
 
     @Test
     public void nestedPairOfOpeningAndClosingShoundlBeBalanced() {
-        assertThat(BalanceParenthesis.balance(NESTED_PARENTHESIS_PAIR), is(true));
+        assertThat(balance(NESTED_PARENTHESIS_PAIR), is(true));
     }
 
     @Test
     public void onePairOfOpeningAndClosingPlusAnExtraClosingShoundlBeBalanced() {
-        assertThat(BalanceParenthesis.balance(PARENTHESIS_PAIR + ")"), is(false));
+        assertThat(balance(PARENTHESIS_PAIR + ")"), is(false));
     }
 
     @Test
     public void multiNestedShouldBeBalanced() {
-        assertThat(BalanceParenthesis.balance(MULTI_NESTED_PARENTHESIS_PAIR), is(true));
+        assertThat(balance(MULTI_NESTED_PARENTHESIS_PAIR), is(true));
     }
 
 }
