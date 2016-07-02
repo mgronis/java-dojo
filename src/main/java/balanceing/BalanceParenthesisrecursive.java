@@ -14,7 +14,7 @@ public class BalanceParenthesisrecursive implements BalanceParenthesis{
         return balanceInternal(characters.iterator(), 0);
     }
 
-    private static boolean balanceInternal(Iterator<Character> characters, int balance) {
+    private boolean balanceInternal(Iterator<Character> characters, int balance) {
         if (balance < 0) {
             return false;
         }
