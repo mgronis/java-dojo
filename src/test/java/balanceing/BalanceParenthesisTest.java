@@ -52,4 +52,9 @@ public class BalanceParenthesisTest {
         assertThat(BalanceParenthesis.balance(NESTED_PARENTHESIS_PAIR), is(true));
     }
 
+    @Test
+    public void onePairOfOpeningAndClosingPlusAnExtraClosingShoundlBeBalanced() {
+        assertThat(BalanceParenthesis.balance(PARENTHESIS_PAIR + ")"), is(false));
+    }
+
 }
