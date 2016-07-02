@@ -23,6 +23,9 @@ public class BalanceParenthesisrecursive {
             else if (currentChar == ')'){
                 return balanceInternal(characters, --balance);
             }
+            else {
+                return false;
+            }
         }
         return balance == 0;
     }
