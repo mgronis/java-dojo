@@ -28,19 +28,17 @@ public class BalanceParenthesisrecursiveTest {
     public void closingParnthesisShouldNotBeBalanced() {
         assertThat(balance(")"), is(false));
     }
-    
+
     @Test
     public void invalidInputShouldNotBeBalanced() {
         assertThat(balance("a"), is(false));
     }
 
-    @Ignore("WIP")
     @Test
     public void onePairOfOpeningAndClosingShoundlBeBalanced() {
         assertThat(balance(PARENTHESIS_PAIR), is(true));
     }
 
-    @Ignore("WIP")
     @Test
     public void twoPairsOfOpeningAndClosingShoundlBeBalanced() {
         assertThat(balance(PARENTHESIS_PAIR + PARENTHESIS_PAIR), is(true));
