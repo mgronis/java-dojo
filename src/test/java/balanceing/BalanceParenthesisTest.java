@@ -10,6 +10,7 @@ public class BalanceParenthesisTest {
     private static final String EMPTY = "";
     public static final String PARENTHESIS_PAIR = "()";
     public static final String INVERTED_PARENTHESIS_PAIR = ")(";
+    public static final String NESTED_PARENTHESIS_PAIR = "(())";
 
     @Test
     public void noParenthesisShouldBeBalanced() {
@@ -39,6 +40,11 @@ public class BalanceParenthesisTest {
     @Test
     public void onePairOfClosingAndOpeningShoundlNotBeBalanced() {
         assertThat(BalanceParenthesis.balance(INVERTED_PARENTHESIS_PAIR), is(false));
+    }
+
+    @Test
+    public void nestedPairOfOpeningAndClosingShoundlBeBalanced() {
+        assertThat(BalanceParenthesis.balance(NESTED_PARENTHESIS_PAIR), is(true));
     }
 
 }

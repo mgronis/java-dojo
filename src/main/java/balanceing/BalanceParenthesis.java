@@ -8,6 +8,7 @@ public class BalanceParenthesis {
             if (balance < 0) {
                 return false;
             }
+
             if (parenthesisString.charAt(stringPos) == '('){
                 balance++;
             }
