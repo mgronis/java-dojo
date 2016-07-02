@@ -20,6 +20,9 @@ public class BalanceParenthesisrecursive {
             if (currentChar == '('){
                 return balanceInternal(characters, ++balance);
             }
+            else if (currentChar == ')'){
+                return balanceInternal(characters, --balance);
+            }
         }
         return balance == 0;
     }

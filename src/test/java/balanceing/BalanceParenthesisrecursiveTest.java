@@ -24,7 +24,6 @@ public class BalanceParenthesisrecursiveTest {
         assertThat(balance("("), is(false));
     }
 
-    @Ignore("WIP")
     @Test
     public void closingParnthesisShouldNotBeBalanced() {
         assertThat(balance(")"), is(false));
