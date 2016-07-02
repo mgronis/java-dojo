@@ -1,6 +1,5 @@
 package balanceing;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static balanceing.BalanceParenthesisrecursive.balance;
@@ -49,19 +48,16 @@ public class BalanceParenthesisrecursiveTest {
         assertThat(balance(INVERTED_PARENTHESIS_PAIR), is(false));
     }
 
-    @Ignore("WIP")
     @Test
     public void nestedPairOfOpeningAndClosingShoundlBeBalanced() {
         assertThat(balance(NESTED_PARENTHESIS_PAIR), is(true));
     }
 
-    @Ignore("WIP")
     @Test
     public void onePairOfOpeningAndClosingPlusAnExtraClosingShoundlBeBalanced() {
         assertThat(balance(PARENTHESIS_PAIR + ")"), is(false));
     }
 
-    @Ignore("WIP")
     @Test
     public void multiNestedShouldBeBalanced() {
         assertThat(balance(MULTI_NESTED_PARENTHESIS_PAIR), is(true));
