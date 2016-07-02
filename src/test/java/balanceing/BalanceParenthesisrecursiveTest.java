@@ -44,7 +44,6 @@ public class BalanceParenthesisrecursiveTest {
         assertThat(balance(PARENTHESIS_PAIR + PARENTHESIS_PAIR), is(true));
     }
 
-    @Ignore("WIP")
     @Test
     public void onePairOfClosingAndOpeningShoundlNotBeBalanced() {
         assertThat(balance(INVERTED_PARENTHESIS_PAIR), is(false));

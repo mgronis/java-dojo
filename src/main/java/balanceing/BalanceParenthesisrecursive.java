@@ -15,6 +15,10 @@ public class BalanceParenthesisrecursive {
     }
 
     private static boolean balanceInternal(Iterator<Character> characters, int balance) {
+        if (balance < 0) {
+            return false;
+        }
+
         if (characters.hasNext()){
             final char currentChar = characters.next().charValue();
             if (currentChar == '('){
