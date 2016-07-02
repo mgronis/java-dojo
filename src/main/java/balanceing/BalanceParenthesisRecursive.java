@@ -5,7 +5,7 @@ import com.google.common.primitives.Chars;
 import java.util.Iterator;
 import java.util.List;
 
-public class BalanceParenthesisrecursive implements BalanceParenthesis{
+public class BalanceParenthesisRecursive implements BalanceParenthesis{
 
     public boolean balance(String parenthesisString) {
 
